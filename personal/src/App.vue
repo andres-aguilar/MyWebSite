@@ -82,14 +82,10 @@
               <section>
                 <v-parallax src="./assets/section.jpg" height="380">
                   <v-layout column align-center justify-center>
-                    <div class="headline white--text mb-3 text-xs-center">Web development has never been easier</div>
+                    <div class="headline mb-3 text-xs-center">Web development has never been easier</div>
                     <em>Kick-start your application today</em>
-                    <v-btn
-                      class="blue lighten-2 mt-5"
-                      dark
-                      large
-                      href="/pre-made-themes"
-                    >
+
+                    <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes">
                       Get Started
                     </v-btn>
                   </v-layout>
@@ -97,58 +93,7 @@
               </section>
 
               <section>
-                <v-container grid-list-xl>
-                  <v-layout row wrap justify-center class="my-5">
-                    <v-flex xs12 sm4>
-                      <v-card class="elevation-0 transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline">Company info</div>
-                        </v-card-title>
-                        <v-card-text>
-                          Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
-                          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                          Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
-                        </v-card-text>
-                      </v-card>
-                    </v-flex>
-                    <v-flex xs12 sm4 offset-sm1>
-                      <v-card class="elevation-0 transparent">
-                        <v-card-title primary-title class="layout justify-center">
-                          <div class="headline">Contact us</div>
-                        </v-card-title>
-                        <v-card-text>
-                          Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
-                        </v-card-text>
-                        <v-list class="transparent">
-                          <v-list-tile>
-                            <v-list-tile-action>
-                              <v-icon class="blue--text text--lighten-2">phone</v-icon>
-                            </v-list-tile-action>
-                            <v-list-tile-content>
-                              <v-list-tile-title>XXX-XXX-XXXX</v-list-tile-title>
-                            </v-list-tile-content>
-                          </v-list-tile>
-                          <v-list-tile>
-                            <v-list-tile-action>
-                              <v-icon class="blue--text text--lighten-2">place</v-icon>
-                            </v-list-tile-action>
-                            <v-list-tile-content>
-                              <v-list-tile-title>México</v-list-tile-title>
-                            </v-list-tile-content>
-                          </v-list-tile>
-                          <v-list-tile>
-                            <v-list-tile-action>
-                              <v-icon class="blue--text text--lighten-2">email</v-icon>
-                            </v-list-tile-action>
-                            <v-list-tile-content>
-                              <v-list-tile-title>andres-aguilar.com</v-list-tile-title>
-                            </v-list-tile-content>
-                          </v-list-tile>
-                        </v-list>
-                      </v-card>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
+                  <my-contact-cards></my-contact-cards>
               </section>
         </v-content>
   </v-app>
@@ -156,10 +101,11 @@
 
 <script>
 import MyToolbar from './components/MyToolbar'
+import MyContactCards from './components/MyContactCards'
 
 export default {
   name: "App",
-  components: { MyToolbar },
+  components: { MyToolbar, MyContactCards },
   data() {
     return {
       title: 'Andrés Aguilar'
