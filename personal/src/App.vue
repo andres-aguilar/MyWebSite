@@ -8,8 +8,8 @@
 
 					<v-layout align-center justify-center column>
 						<v-avatar :tile="false" size="128" color="grey lighten-4" >
-          					<img src="./assets/photo.jpg" alt="avatar">
-        				</v-avatar>
+							<img src="./assets/photo.jpg" alt="avatar">
+						</v-avatar>
 						<br>
 						<h1 class="mb-2 display-1 text-xs-center"> {{title}} </h1>
 						<div class="subheading mb-3 mr-2 text-xs-center"> {{description}} </div>

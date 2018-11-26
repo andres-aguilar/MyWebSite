@@ -2,8 +2,10 @@
     <v-footer dark height="auto" >
     <v-card flat tile class="indigo lighten-1 white--text text-xs-center" >
       <v-card-text>
-        <v-btn v-for="icon in icons" :key="icon" class="mx-3 white--text" icon >
-            <v-icon size="24px">{{ icon }}</v-icon>
+        <v-btn v-for="(sm, i) in social_media" :key="i" class="mx-3 white--text" icon >
+            <a class="icono" :href="sm.url" target="_blank">
+                <v-icon size="24px">{{ sm.icon }}</v-icon>
+            </a>
         </v-btn>
       </v-card-text>
 
@@ -24,17 +26,20 @@
     export default {
         props: ['title'],
         data: () => ({
-            icons: [
-                'fab fa-facebook',
-                'fab fa-twitter',
-                'fab fa-google-plus',
-                'fab fa-linkedin',
-                'fab fa-instagram',
+            social_media: [
+                //{icon: 'fab fa-facebook', url: '#'},
+                {icon: 'fab fa-twitter', url: 'https://twitter.com/nano_yosh'},
+                {icon: 'fab fa-github', url: 'https://github.com/andres-aguilar'},
+                {icon: 'fab fa-linkedin', url: 'https://www.linkedin.com/in/aguilar-salgado-andres/'},
+                //{icon: 'fab fa-instagram', url: ''},
             ]
         })
     }
 </script>
 
-<style>
-
+<style scoped>
+    .icono {
+        text-decoration: none;
+        color: white
+    }
 </style>
