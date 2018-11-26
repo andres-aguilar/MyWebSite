@@ -39,8 +39,8 @@ export default {
     name: 'MyProjectsCard',
     data() {
         return {
-            title: 'The best way to start developing',
-            subtitle: 'Cras facilisis mi vitae nunc',
+            title: 'Proyectos',
+            subtitle: 'Algunos de los proyectos en los que he participado',
             projects: [
                 { id: 1, icon: 'blur_linear', title: 'ImmunediveRsity', text: 'Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.' },
                 { id: 2, icon: 'power_input', title: 'Helitrons', text: 'Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.' },
