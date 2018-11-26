@@ -1,115 +1,77 @@
 <template>
-    <v-app>
-        <my-toolbar :title='title'></my-toolbar>
+	<v-app>
+		<my-toolbar :title='title' :links="links"></my-toolbar>
 
-        <v-content>
-            <section>
+		<v-content>
+			<section id="home">
+				<v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="600">
 
-              <v-parallax src="./assets/hero.jpeg" height="600">
-                <v-layout column align-center justify-center>
-                  <img src="./assets/vuetify.png" alt="Vuetify.js" height="200">
-                  <h1 class="mb-2 display-1 text-xs-center">Parallax Template</h1>
-                  <div class="subheading mb-3 text-xs-center">Powered by Vuetify</div>
+					<v-layout align-center justify-center column>
+						<v-avatar :tile="false" size="128" color="grey lighten-4" >
+          					<img src="./assets/photo.jpg" alt="avatar">
+        				</v-avatar>
+						<br>
+						<h1 class="mb-2 display-1 text-xs-center"> {{title}} </h1>
+						<div class="subheading mb-3 mr-2 text-xs-center"> {{description}} </div>
+					</v-layout>
 
-                  <v-btn class="blue lighten-2 mt-5 white--text" dark large href="/pre-made-themes"> Get Started </v-btn>
-                </v-layout>
-              </v-parallax>
+				</v-parallax>
+			</section>
 
-            </section>
+			<section id="projects">
+				<my-projects-card></my-projects-card>
+			</section>
 
-              <section>
-                <v-layout column wrap class="my-5" align-center >
-                  <v-flex xs12 sm4 class="my-3">
-                    <div class="text-xs-center">
-                      <h2 class="headline">The best way to start developing</h2>
-                      <span class="subheading"> Cras facilisis mi vitae nunc  </span>
-                    </div>
-                  </v-flex>
-                  <v-flex xs12>
-                    <v-container grid-list-xl>
-                      <v-layout row wrap align-center>
-                        <v-flex xs12 md4>
-                          <v-card class="elevation-0 transparent">
-                            <v-card-text class="text-xs-center">
-                              <v-icon x-large class="blue--text text--lighten-2">color_lens</v-icon>
-                            </v-card-text>
-                            <v-card-title primary-title class="layout justify-center">
-                              <div class="headline text-xs-center">Material Design</div>
-                            </v-card-title>
-                            <v-card-text>
-                              Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
-                              Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                              Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md4>
-                          <v-card class="elevation-0 transparent">
-                            <v-card-text class="text-xs-center">
-                              <v-icon x-large class="blue--text text--lighten-2">flash_on</v-icon>
-                            </v-card-text>
-                            <v-card-title primary-title class="layout justify-center">
-                              <div class="headline">Fast development</div>
-                            </v-card-title>
-                            <v-card-text>
-                              Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
-                              Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                              Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                        <v-flex xs12 md4>
-                          <v-card class="elevation-0 transparent">
-                            <v-card-text class="text-xs-center">
-                              <v-icon x-large class="blue--text text--lighten-2">build</v-icon>
-                            </v-card-text>
-                            <v-card-title primary-title class="layout justify-center">
-                              <div class="headline text-xs-center">Completely Open Sourced</div>
-                            </v-card-title>
-                            <v-card-text>
-                              Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
-                              Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                              Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
-                            </v-card-text>
-                          </v-card>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-flex>
-                </v-layout>
-              </section>
+			<section id="technologies">
+				<v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg" height="380">
+					<v-layout column align-center justify-center>
+							<h1 class="mb-2 display-1 text-xs-center"> Tecnologías </h1>
+							<v-layout align-center justify-space-around row fill-height>
+								<div class="subheading mb-3 mr-2 text-xs-center"> Vue.js </div>
+								<div class="subheading mb-3 mr-2 text-xs-center"> Django </div>
+								<div class="subheading mb-3 mr-2 text-xs-center"> Java </div>
+								<div class="subheading mb-3 mr-2 text-xs-center"> Mongo </div>
+							</v-layout>
+					</v-layout>
+				</v-parallax>
+			</section>
 
-              <section>
-                <v-parallax src="./assets/section.jpg" height="380">
-                  <v-layout column align-center justify-center>
-                    <div class="headline mb-3 text-xs-center">Web development has never been easier</div>
-                    <em>Kick-start your application today</em>
+			<section id="contact">
+				<my-contact-cards></my-contact-cards>
+			</section>
 
-                    <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes">
-                      Get Started
-                    </v-btn>
-                  </v-layout>
-                </v-parallax>
-              </section>
-
-              <section>
-                  <my-contact-cards></my-contact-cards>
-              </section>
-        </v-content>
-  </v-app>
+			<section>
+				<my-footer :title="title"></my-footer>
+			</section>
+		</v-content>
+	</v-app>
 </template>
 
 <script>
-import MyToolbar from './components/MyToolbar'
-import MyContactCards from './components/MyContactCards'
+	import MyToolbar from './components/MyToolbar'
+	import MyContactCards from './components/MyContactCards'
+	import MyProjectsCard from './components/MyProjectsCard'
+	import MyFooter from './components/MyFooter'
 
-export default {
-  name: "App",
-  components: { MyToolbar, MyContactCards },
-  data() {
-    return {
-      title: 'Andrés Aguilar'
-    }
-  }
-}
+	export default {
+		name: "App",
+		components: { MyToolbar, MyContactCards, MyProjectsCard, MyFooter },
+		data() {
+			return {
+				title: 'Andrés Aguilar',
+				description: 'Ing en TI, 100% pro software libre, usuario GNU/Linux por más de 10 años, programador Sr Python. Apasionado por la tecnología y la lectura.',
+				links: [
+					{ title: 'Home', icon: 'home', url: '#home' },
+					{ title: 'Projects', icon: 'work', url: '#projects' },
+					{ title: 'Technologies', icon: 'usb', url: '#technologies' },
+					{ title: 'Contact', icon: 'mail', url: '#contact' }
+				]
+			}
+		}
+	}
 </script>
+
+<style scoped>
+	.v-card { box-shadow: none }
+	.theme--dark.v-card { background-color: transparent !important }
+</style>
