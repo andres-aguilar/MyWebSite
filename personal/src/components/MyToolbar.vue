@@ -12,7 +12,7 @@
         </v-toolbar>
 
         <div class="hidden-md-and-up">
-            <v-toolbar color="primary" :dark="true">
+            <v-toolbar fixed color="primary" :dark="true">
                 <v-toolbar-title> {{ title }} </v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-toolbar-side-icon @click.stop="drawer = !drawer"> </v-toolbar-side-icon>
@@ -42,7 +42,7 @@
                     </v-list-tile-action>
 
                     <v-list-tile-content>
-                        <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                        <v-list-tile-title> <a class="menu-link" :href="item.url"> {{ item.title }} </a> </v-list-tile-title>
                     </v-list-tile-content>
 
                 </v-list-tile>
@@ -61,3 +61,11 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    .menu-link {
+        text-decoration: none;
+        font-size: 1.2em;
+        color: inherit
+    }
+</style>
